@@ -4,10 +4,6 @@ export default {
   props: ['user'],
 
    
-
-  
-
-  
   template: `
      <body class="kidsPanel">
        
@@ -25,12 +21,12 @@ export default {
        </div>
 
        <div class=listOne>
-         <h2>Animated</h2>
+         <h2>Toy Stories</h2>
          <div class="moviesOne"></div>
        </div>
 
        <div class=listOne>
-         <h2>Popular</h2>
+         <h2>Top Animations</h2>
          <div class="moviesTwo"></div>
        </div>
 
@@ -70,7 +66,7 @@ export default {
       }
     };
     
-   fetch(' https://online-movie-database.p.rapidapi.com/auto-comple', options)
+   fetch('https://online-movie-database.p.rapidapi.com/auto-complete?q=angrybird', options)
       .then(response => response.json())
       .then(data => {
         const list = data.d;
@@ -80,8 +76,8 @@ export default {
           const poster = item.i.imageUrl;
           const movie = `<li><img src = "${poster}" <h2>${name}</h2>`
           document.querySelector('.movies').innerHTML += movie;
-          document.querySelector('.moviesOne').innerHTML += movie;
-          document.querySelector('.moviesTwo').innerHTML += movie;
+           
+          
           
         })
         
@@ -90,6 +86,43 @@ export default {
     //This is where you are going to fetch the data from the IMDB API
     //load it to your view page
     //one  for adult and one for kids homa page --> watch the youtube link
+
+    fetch('https://online-movie-database.p.rapidapi.com/auto-complete?q=toystory', options)
+      .then(response => response.json())
+      .then(data => {
+        const list = data.d;
+    
+        list.map((item) => {
+          const name = item.l;
+          const poster = item.i.imageUrl;
+          const movie = `<li><img src = "${poster}" <h2>${name}</h2>`
+          
+          document.querySelector('.moviesOne').innerHTML += movie;
+          
+          
+        })
+        
+      })
+      .catch(err => console.error(err));
+
+
+      fetch('https://online-movie-database.p.rapidapi.com/auto-complete?q=animation', options)
+      .then(response => response.json())
+      .then(data => {
+        const list = data.d;
+    
+        list.map((item) => {
+          const name = item.l;
+          const poster = item.i.imageUrl;
+          const movie = `<li><img src = "${poster}" <h2>${name}</h2>`
+          
+          document.querySelector('.moviesTwo').innerHTML += movie;
+          
+          
+        })
+        
+      })
+      .catch(err => console.error(err));
 
 
 

@@ -1,0 +1,30 @@
+//Adult Page
+
+.movies, .moviesOne, .moviesTwo, .music {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.movies li, .moviesOne li, .moviesTwo li, .music li {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  background-color: $main-bg-color;
+}
+.movies li img, .moviesOne li img, .moviesTwo li img, .music li img {
+  max-width: 200px;
+  border-radius: 12px;
+}
+.movies li h2, .moviesOne li h2, .moviesTwo li h2, .music li h2 {
+  color: aliceblue;
+  font-size: 1.5em;
+  padding: 2em;
+  margin-top: auto;
+  
+}

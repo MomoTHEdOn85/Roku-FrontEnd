@@ -1,0 +1,53 @@
+//Kids home page
+.kidsPanel {
+  background: linear-gradient(#DC01E6, #DCDC2B);
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+#main-view {
+  padding-top: 1em;
+}
+
+.PlayingCurrent {
+  position: relative;
+  padding: 1em;
+  border-radius: 4em;
+
+  img {
+    opacity: 0.6;
+    width: 100%;
+  } 
+}
+
+.bottom-left {
+  background: linear-gradient(#DC01E6, #172038 );
+  width: 90%;
+  position: absolute;
+  bottom: 4em;
+  left: 3em; 
+  box-shadow: 0 8px 6px -6px black;
+  padding: 1.5em;
+   
+  h3{
+    
+    text-align: left;
+    font-size: 2em;
+  }
+  h2{
+    text-align: left;
+    font-size: 3em;
+  }
+
+
+}
+
+.listOne {
+  h2 {
+    font-size: 3em;
+    font-weight: 600;
+    text-align: left;
+    padding: 1em 1.5em;
+  }
+}
+

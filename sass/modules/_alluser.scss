@@ -1,0 +1,78 @@
+//top nav 
+.aunthenticate{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  
+  overflow-x: hidden;
+   
+
+  .logo-cont {
+    padding: 2em 2em 1em 3em;
+    width: 30%;
+    img {
+      width:40%;
+    }
+  }
+
+  .settings {
+    float: right;
+    margin-left: auto;
+    padding: 3em 2em 4em 2em;
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    li {  
+      cursor: pointer;
+      &:hover {
+        color: linear-gradient(#F900E6, #2202E3);
+        cursor: pointer;
+        transition: .2s ease-in-out 0s;
+        transform: scale(1.25);
+      }
+       
+    }
+  }
+
+}
+
+//all user 
+
+.who-h2{
+  padding: 1.5em 0.2em;
+  font-size: 1.5em;
+}
+.all-users{
+  display: grid;
+  grid-column: 2 / span 2;
+  grid-template-columns: repeat(2, 1fr); /*2 inrepeat means , you are gonna be 2 and 1 frwould divide it by 50 50 percent*/
+  justify-content: space-evenly;
+  row-gap: 2em;
+  column-gap: 2em;
+ 
+  img {
+    border-radius: 3em;
+  }
+  
+}
+
+.user-name{
+  font-size: 1.5em;
+  padding: 1em;
+}
+
+.user {
+  img:hover {
+    cursor: pointer;
+    transition: .2s ease-in-out 0s;
+    transform: scale(1.25); 
+  }
+   
+}
+
+ 
+
+
+
+ 

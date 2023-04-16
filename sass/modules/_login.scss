@@ -1,0 +1,88 @@
+.logcontainer {
+    background: linear-gradient(#ca02d4,  #142246);
+    height: 100vh;
+    padding: 2em;
+
+    img {
+        width: 50%;  
+    }
+
+}
+
+.jumbotron { 
+    h1 { 
+        padding: 0.4em;
+        font-size: 2em; 
+        margin-bottom: 0.5em;
+        font-weight: bold; 
+    }
+
+    p { 
+        padding: 1em;
+        font-family: $main-font-family;
+        font-weight: 200;
+        line-height: 1.5;
+        font-size: 1.5em;
+    }
+}
+
+.btn-lo {
+    padding: 1em;
+}
+
+.log-in {
+    padding: 1.4em;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1em;
+
+    input {
+        border-radius: 3em;
+        padding: 1em;
+        margin-bottom: 1.5em; 
+    }
+}
+
+.login-submit { 
+    font-family: $main-font-family;
+    font-size: 2em;
+    width: auto;
+    padding: 0.2em 0.7em;
+    font-weight: 200;
+    text-align: center;
+    background-color: transparent;
+    border-radius: 1.2em;
+    border: 2px solid white;
+    text-align: center;
+
+    &:hover {
+        background: linear-gradient(#F900E6, #2202E3);
+        cursor: pointer;
+        transition: .2s ease-in-out 0s;
+        transform: scale(1.25);
+    }
+
+    .login-btn{
+        color: white;
+        background-color: transparent;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .jumbotron p {
+        width: 80%;
+    }
+
+    .logcontainer {
+        background: linear-gradient(#ca02d4,  #142246);
+        height: 100vh;
+        padding: 2em;
+    
+        img {
+            width: 20%;
+            padding: 2em;
+           
+        }
+    
+    }
+}
